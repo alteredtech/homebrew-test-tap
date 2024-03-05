@@ -26,7 +26,7 @@ class RandomNumber < Formula
     end
   
     def install
-      bin.install "scripts/*"
+      bin.install "*"
       virtualenv_install_with_resources
     end
   
