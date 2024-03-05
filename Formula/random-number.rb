@@ -15,8 +15,8 @@ class RandomNumber < Formula
     
     depends_on "python@3.11"
 
-    File.open(File.expand_path('../../tools/resources.txt', __FILE__), 'w') do |f|
-      f.each_line do |line|
+    File.open(File.expand_path('../../tools/resources.txt', __FILE__), 'r') do |f|
+      f.read.each_line do |line|
         name, url, sha256 = line.strip.split(',')
         resource name do
           url url
