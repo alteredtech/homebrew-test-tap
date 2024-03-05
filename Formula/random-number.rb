@@ -2,6 +2,7 @@ require 'json'
 
 
 class RandomNumber < Formula
+    include Language::Python::Virtualenv
     desc "test repo for trying homebrew packaging"
     homepage "https://github.com/alteredtech/random-number"
     
@@ -13,10 +14,20 @@ class RandomNumber < Formula
     sha256 release['sha256']
     
     depends_on "python@3.11"
+
+    File.open(File.expand_path('../../tools/resources.txt', __FILE__), 'w') do |f|
+      f.each_line do |line|
+        name, url, sha256 = line.strip.split(',')
+        resource name do
+          url url
+          sha256 sha256
+        end
+      end
+    end
   
     def install
-      system "pipenv install --system --deploy --ignore-pipfile"
       bin.install "scripts/*"
+      virtualenv_install_with_resources
     end
   
     test do
