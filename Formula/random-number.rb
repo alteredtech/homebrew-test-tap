@@ -15,21 +15,21 @@ class RandomNumber < Formula
     
     depends_on "python@3.11"
 
-    File.open(File.expand_path('../../tools/resources.txt', __FILE__), 'r') do |f|
-      f.read.each_line do |line|
-        name, url, sha256 = line.strip.split(',')
-        resource name do
-          url url
-          sha256 sha256
-        end
-      end
-    end
+    # File.open(File.expand_path('../../tools/resources.txt', __FILE__), 'r') do |f|
+    #   f.read.each_line do |line|
+    #     name, url, sha256 = line.strip.split(',')
+    #     resource name do
+    #       url url
+    #       sha256 sha256
+    #     end
+    #   end
+    # end
   
     def install
       Dir["scripts/*.py"].each do |file|
         bin.install file
       end
-      virtualenv_install_with_resources
+      # virtualenv_install_with_resources
     end
   
     test do
