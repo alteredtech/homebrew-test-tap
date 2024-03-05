@@ -26,7 +26,7 @@ class RandomNumber < Formula
     end
   
     def install
-      Dir["*.py"].each do |file|
+      Dir["scripts/*.py"].each do |file|
         bin.install file
       end
       virtualenv_install_with_resources
