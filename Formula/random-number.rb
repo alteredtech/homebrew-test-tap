@@ -111,6 +111,10 @@ class RandomNumber < Formula
         sha256 "38c76486b9d672c546d57d8035df0beb7f4a9b088bc3fb2de5431ae821444377"
     end
     
+
+    def python3
+        "python3.12"
+    end
   
     def install
         libexec.install "scripts/randnumber.py"
@@ -118,7 +122,9 @@ class RandomNumber < Formula
         libexec.install "scripts/randnumber2.py"
         bin.install_symlink libexec/"randnumber2.py" => "randnumber2"
 
-        virtualenv_install_with_resources
+        venv = virtualenv_create(libexec, python3)
+        venv.pip_install
+        venv.pip_install_and_link buildpath
     end
   
     test do
