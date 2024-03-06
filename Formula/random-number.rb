@@ -113,11 +113,11 @@ class RandomNumber < Formula
     
   
     def install
-        libexec.install ["scripts/randnumber.py"]
-        bin.install_symlink libexec/randnumber.py => randnumber
-        libexec.install ["scripts/randnumber2.py"]
-        bin.install_symlink libexec/randnumber2.py => randnumber2
-        
+        libexec.install "scripts/randnumber.py"
+        bin.install_symlink libexec/"randnumber.py" => "randnumber"
+        libexec.install "scripts/randnumber2.py"
+        bin.install_symlink libexec/"randnumber2.py" => "randnumber2"
+
         virtualenv_install_with_resources
     end
   
