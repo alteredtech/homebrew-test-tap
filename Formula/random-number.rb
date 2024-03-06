@@ -6,30 +6,21 @@ class RandomNumber < Formula
     desc "test repo for trying homebrew packaging"
     homepage "https://github.com/alteredtech/random-number"
     
-    release = JSON.parse(File.open(File.expand_path('../../tools/release.json', __FILE__)).read)
-    version release['version']
+    version v1.2.22
     license "MIT"
 
-    url "https://github.com/alteredtech/random-number/releases/download/#{version}/random-number-release.tar.gz"
-    sha256 release['sha256']
+    url "https://github.com/alteredtech/random-number/releases/download/v1.2.22/random-number-release.tar.gz"
+    sha256 
     
-    depends_on "python@3.11"
+    depends_on "python@3.12"
 
-    # File.open(File.expand_path('../../tools/resources.txt', __FILE__), 'r') do |f|
-    #   f.read.each_line do |line|
-    #     name, url, sha256 = line.strip.split(',')
-    #     resource name do
-    #       url url
-    #       sha256 sha256
-    #     end
-    #   end
-    # end
+    
   
     def install
       Dir["scripts/*.py"].each do |file|
         bin.install file
       end
-      # virtualenv_install_with_resources
+      virtualenv_install_with_resources
     end
   
     test do
