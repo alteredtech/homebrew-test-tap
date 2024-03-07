@@ -106,11 +106,6 @@ class RandomNumber < Formula
         sha256 "cb28a5ebda8bc47d8c8015307d93163464f9f2b91ab4006e09ff0ce07e8bfb30"
     end
     
-    resource "jeepney" do
-        url "https://files.pythonhosted.org/packages/d6/f4/154cf374c2daf2020e05c3c6a03c91348d59b23c5366e968feb198306fdf/jeepney-0.8.0.tar.gz"
-        sha256 "5efe48d255973902f6badc3ce55e2aa6c5c3b3bc642059ef3a91247bcfcc5806"
-    end
-    
     resource "jira" do
         url "https://files.pythonhosted.org/packages/d7/d6/4e31a6f041f29ae314ff2079f3692bd4d3ac360529787aeb5f3b3d9dae5b/jira-3.6.0.tar.gz"
         sha256 "4c67497fe8dc2f60f1c4f7b33479f059c928bec3db9dcb5cd7b6a09b6ecc0942"
@@ -284,11 +279,6 @@ class RandomNumber < Formula
     resource "s3transfer" do
         url "https://files.pythonhosted.org/packages/a0/b5/4c570b08cb85fdcc65037b5229e00412583bb38d974efecb7ec3495f40ba/s3transfer-0.10.0.tar.gz"
         sha256 "d0c8bbf672d5eebbe4e57945e23b972d963f07d82f661cabf678a5c88831595b"
-    end
-    
-    resource "SecretStorage" do
-        url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
-        sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
     end
     
     resource "setuptools" do
