@@ -13,7 +13,7 @@ class RandomNumber < Formula
     url "https://github.com/alteredtech/random-number/releases/download/#{version}/tools-core-#{version}.tar.gz"
     sha256 release['sha256']
     
-    depends_on "python@3.11"
+    depends_on "python@3.12"
 
     
     resource "attrs" do
@@ -32,13 +32,13 @@ class RandomNumber < Formula
     end
     
     resource "boto3" do
-        url "https://files.pythonhosted.org/packages/48/e5/ecf406576715ad4d7cef6570ada5d383a14ebecfbe306275d381d657904e/boto3-1.34.57.tar.gz"
-        sha256 "c26c31ceeeb2bc5d2bb96ba0fdc9a04d7b10e6e0b081c55b9cea9069a0be04dd"
+        url "https://files.pythonhosted.org/packages/42/77/59ba070269fb996144ce18b4a4bebcbacf7aeb32b7724b6d46124b730213/boto3-1.34.58.tar.gz"
+        sha256 "09e3d17c718bc938a76774f31bc557b20733c0f5f9135a3e7782b55f3459cbdd"
     end
     
     resource "botocore" do
-        url "https://files.pythonhosted.org/packages/e9/ee/11f0830522c3d88f3b4f9125c5fd792e77d420d79278933ae307f62696ca/botocore-1.34.57.tar.gz"
-        sha256 "9a5aa2034de9f0c367b4b61a92af0fa827f5c21affa19e0a284838a142e71083"
+        url "https://files.pythonhosted.org/packages/b3/e9/d965511c91f65ea3eddb9e0bf4dfe96dee9254bf4082f5511dad56f253de/botocore-1.34.58.tar.gz"
+        sha256 "d75216952886dc513ea1b5e2979a6af08feed2f537e3fc102e4a0a2ead563a35"
     end
     
     resource "certifi" do
@@ -86,11 +86,6 @@ class RandomNumber < Formula
         sha256 "9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca"
     end
     
-    resource "importlib_metadata" do
-        url "https://files.pythonhosted.org/packages/64/dd/7467b3be0e863401438a407411f78c33376748aff39ec0b8f45f6739c86c/importlib_metadata-7.0.2.tar.gz"
-        sha256 "198f568f3230878cb1b44fbd7975f87906c22336dba2e4a7f05278c281fbd792"
-    end
-    
     resource "inquirerpy" do
         url "https://files.pythonhosted.org/packages/64/73/7570847b9da026e07053da3bbe2ac7ea6cde6bb2cbd3c7a5a950fa0ae40b/InquirerPy-0.3.4.tar.gz"
         sha256 "89d2ada0111f337483cb41ae31073108b2ec1e618a49d7110b0d7ade89fc197e"
@@ -109,6 +104,11 @@ class RandomNumber < Formula
     resource "jaraco.classes" do
         url "https://files.pythonhosted.org/packages/a5/8a/ed955184b2ef9c1eef3aa800557051c7354e5f40a9efc9a46e38c3e6d237/jaraco.classes-3.3.1.tar.gz"
         sha256 "cb28a5ebda8bc47d8c8015307d93163464f9f2b91ab4006e09ff0ce07e8bfb30"
+    end
+    
+    resource "jeepney" do
+        url "https://files.pythonhosted.org/packages/d6/f4/154cf374c2daf2020e05c3c6a03c91348d59b23c5366e968feb198306fdf/jeepney-0.8.0.tar.gz"
+        sha256 "5efe48d255973902f6badc3ce55e2aa6c5c3b3bc642059ef3a91247bcfcc5806"
     end
     
     resource "jira" do
@@ -154,11 +154,6 @@ class RandomNumber < Formula
     resource "more-itertools" do
         url "https://files.pythonhosted.org/packages/df/ad/7905a7fd46ffb61d976133a4f47799388209e73cbc8c1253593335da88b4/more-itertools-10.2.0.tar.gz"
         sha256 "8fccb480c43d3e99a00087634c06dd02b0d50fbf088b380de5a41a015ec239e1"
-    end
-    
-    resource "mysql-connector-python" do
-        url "https://files.pythonhosted.org/packages/ef/ca/26d5d40d31f0d16b26a8c2a4d1944dc0d05d57f838d00e28de9c779c4d97/mysql-connector-python-8.3.0.tar.gz"
-        sha256 "e4ff23aa8036b4c5b6463fa81398bb5a528a29f99955de6ba937f0bba57a2fe3"
     end
     
     resource "numpy" do
@@ -291,6 +286,16 @@ class RandomNumber < Formula
         sha256 "d0c8bbf672d5eebbe4e57945e23b972d963f07d82f661cabf678a5c88831595b"
     end
     
+    resource "SecretStorage" do
+        url "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz"
+        sha256 "2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77"
+    end
+    
+    resource "setuptools" do
+        url "https://files.pythonhosted.org/packages/c8/1f/e026746e5885a83e1af99002ae63650b7c577af5c424d4c27edcf729ab44/setuptools-69.1.1.tar.gz"
+        sha256 "5c0806c7d9af348e6dd3777b4f4dbb42c7ad85b190104837488eab9a7c945cf8"
+    end
+    
     resource "simple-salesforce" do
         url "https://files.pythonhosted.org/packages/8c/c3/f979fed15f11285b1cd6d22929d7259ad15eef5334e5594fab443135ba5b/simple-salesforce-1.12.5.tar.gz"
         sha256 "ef65f72438e3b215619f6835d3d4356e147adf3a7ece6896d239127dd6aefcd1"
@@ -309,11 +314,6 @@ class RandomNumber < Formula
     resource "slack_sdk" do
         url "https://files.pythonhosted.org/packages/f8/77/e567bfc892a352ea2c6bc7e29830bed763b4a14681e7fefaf82974a9f775/slack_sdk-3.27.1.tar.gz"
         sha256 "85d86b34d807c26c8bb33c1569ec0985876f06ae4a2692afba765b7a5490d28c"
-    end
-    
-    resource "splunk-sdk" do
-        url "https://files.pythonhosted.org/packages/ee/4a/e92bc2d09cbaafcf54f1226bb1e87988ab2c657cd65c9a9a081e94760b81/splunk-sdk-1.7.4.tar.gz"
-        sha256 "8f3f149e3a0daf7526ed36882c109e4ec8080e417efe25d23f4578e86d38b9f2"
     end
     
     resource "sqlparse" do
@@ -391,11 +391,6 @@ class RandomNumber < Formula
         sha256 "72093acfdb1d8360ed400869b73fbf1882b95c4287f798084c42ee0c1ff0e425"
     end
     
-    resource "zipp" do
-        url "https://files.pythonhosted.org/packages/58/03/dd5ccf4e06dec9537ecba8fcc67bbd4ea48a2791773e469e73f94c3ba9a6/zipp-3.17.0.tar.gz"
-        sha256 "84e64a1c28cf7e91ed2078bb8cc8c259cb19b76942096c8d7b84947690cabaf0"
-    end
-    
     resource "zope.interface" do
         url "https://files.pythonhosted.org/packages/cd/37/1b003190ba7148226a8212d98ff8074e212fef30c82e616bdb818ae1f838/zope.interface-6.2.tar.gz"
         sha256 "3b6c62813c63c543a06394a636978b22dffa8c5410affc9331ce6cdb5bfa8565"
@@ -403,7 +398,7 @@ class RandomNumber < Formula
     
 
     def python3
-        "python3.11"
+        "python3.12"
     end
   
     def install
