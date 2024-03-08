@@ -67,8 +67,8 @@ class RandomNumber < Formula
     end
     
     resource "pandas" do
-        url "https://files.pythonhosted.org/packages/3d/59/2afa81b9fb300c90531803c0fd43ff4548074fa3e8d0f747ef63b3b5e77a/pandas-2.2.1.tar.gz"
-        sha256 "0ab90f87093c13f3e8fa45b48ba9f39181046e8f3317d3aadb2fffbb1b978572"
+        url "https://files.pythonhosted.org/packages/9f/12/0b6bdd627b99cb10816956c1047b0733ef33b61a84e3420faf4d3202df06/pandas-2.0.0.tar.gz"
+        sha256 "cda9789e61b44463c1c4fe17ef755de77bcd13b09ba31c940d20f193d63a5dc8"
     end
     
     resource "pendulum" do
