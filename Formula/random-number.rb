@@ -19,6 +19,7 @@ class RandomNumber < Formula
     depends_on "python-certifi"
     depends_on "python-cryptography"
     depends_on "mozjpeg"
+    depends_on "cmake" => :build
 
     
     resource "attrs" do
