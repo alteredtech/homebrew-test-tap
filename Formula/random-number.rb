@@ -318,8 +318,8 @@ class RandomNumber < Formula
     end
     
     resource "stone" do
-        url "https://files.pythonhosted.org/packages/99/6f/ef25bbc1aefeb9c905d527f1d3cd3f41f22f40566d33001b8bb14ae0cdaf/stone-3.3.1.tar.gz"
-        sha256 "4ef0397512f609757975f7ec09b35639d72ba7e3e17ce4ddf399578346b4cb50"
+        url "https://files.pythonhosted.org/packages/61/4f/b5a9138e86b13e00e2439c62fb4d045d595e0e260454977741f62448c624/stone-3.2.1.tar.gz"
+        sha256 "9bc78b40143b4ef33bf569e515408c2996ffebefbb1a897616ebe8aa6f2d7e75"
     end
     
     resource "tabulate" do
