@@ -168,8 +168,8 @@ class RandomNumberAT9 < Formula
     end
     
     resource "packaging" do
-        url "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
-        sha256 "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"
+        url "https://files.pythonhosted.org/packages/ee/b5/b43a27ac7472e1818c4bafd44430e69605baefe1f34440593e0332ec8b4d/packaging-24.0.tar.gz"
+        sha256 "eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"
     end
     
     resource "pandas" do
@@ -210,6 +210,11 @@ class RandomNumberAT9 < Formula
     resource "prettytable" do
         url "https://files.pythonhosted.org/packages/19/d3/7cb826e085a254888d8afb4ae3f8d43859b13149ac8450b221120d4964c9/prettytable-3.10.0.tar.gz"
         sha256 "9665594d137fb08a1117518c25551e0ede1687197cf353a4fdc78d27e1073568"
+    end
+    
+    resource "primePy" do
+        url "https://files.pythonhosted.org/packages/35/77/0cfa1b4697cfb5336f3a96e8bc73327f64610be3a64c97275f1801afb395/primePy-1.3.tar.gz"
+        sha256 "25fd7e25344b0789a5984c75d89f054fcf1f180bef20c998e4befbac92de4669"
     end
     
     resource "prompt-toolkit" do
