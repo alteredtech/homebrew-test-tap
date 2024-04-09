@@ -25,13 +25,13 @@ class RandomNumberAT9 < Formula
 
     
     resource "mysql-connector-python" do
-        url "https://files.pythonhosted.org/packages/d3/60/be97d5a73de74f16c612cb6e477bfb949d9e39befea4812d8c21b26f62e1/mysql-connector-python-8.2.0.tar.gz"
-        sha256 "884eba07b4c97edf552a03f5fdca145e0ab4afc3d8677cca20276effca1bea54"
+        url "https://files.pythonhosted.org/packages/a7/21/322c3d5c2d04d4e8d0abac44d3de847ce1dc743e08a4606055b94be8c5d4/mysql-connector-python-8.0.23.tar.gz"
+        sha256 "5e84dcc25d4b505118e0c28f07de496a41bc0ab121232a2aba83d0248cd49257"
     end
     
     resource "protobuf" do
-        url "https://files.pythonhosted.org/packages/ba/dd/f8a01b146bf45ac12a829bbc599e6590aa6a6849ace7d28c42d77041d6ab/protobuf-4.21.12.tar.gz"
-        sha256 "7cd532c4566d0e6feafecc1059d04c7915aec8e182d1cf7adee8b24ef1e2e6ab"
+        url "https://files.pythonhosted.org/packages/d2/e5/7e22ca7201a6b1040aae7787d0fe6cd970311da376a86fdafa5182be1d1b/protobuf-5.26.1.tar.gz"
+        sha256 "8ca2a1d97c290ec7b16e4e5dff2e5ae150cc1582f55b5ab300d45cb0dfa90e51"
     end
     
 
