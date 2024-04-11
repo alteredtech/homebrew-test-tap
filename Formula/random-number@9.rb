@@ -100,6 +100,8 @@ class RandomNumberAT9 < Formula
   
     def install
         venv = virtualenv_create(libexec, python3)
+        resource("Pillow").stage { system "python", *Language::Python.setup_install_args(libexec/"vendor") }
+        venv.pip_install resources.reject { |r| r.name == "Pillow" }
         venv.pip_install resources
         venv.pip_install_and_link buildpath
     end
