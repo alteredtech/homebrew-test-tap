@@ -100,8 +100,32 @@ class RandomNumberAT9 < Formula
   
     def install
         venv = virtualenv_create(libexec, python3)
+        resource("Pillow").stage do
+          inreplace "setup.py" do |s|
+            sdkprefix = MacOS.sdk_path_if_needed ? MacOS.sdk_path : ""
+            s.gsub! "openjpeg.h",
+                    "probably_not_a_header_called_this_eh.h"
+            s.gsub! "ZLIB_ROOT = None",
+                    "ZLIB_ROOT = ('#{sdkprefix}/usr/lib', '#{sdkprefix}/usr/include')"
+            s.gsub! "JPEG_ROOT = None",
+                    "JPEG_ROOT = ('#{Formula["jpeg"].opt_prefix}/lib', '#{Formula["jpeg"].opt_prefix}/include')"
+            s.gsub! "FREETYPE_ROOT = None",
+                    "FREETYPE_ROOT = ('#{Formula["freetype"].opt_prefix}/lib', " \
+                                     "'#{Formula["freetype"].opt_prefix}/include')"
+          end
+    
+          # avoid triggering "helpful" distutils code that doesn't recognize Xcode 7 .tbd stubs
+          unless MacOS::CLT.installed?
+            ENV.append "CFLAGS", "-I#{MacOS.sdk_path}/System/Library/Frameworks/Tk.framework/Versions/8.5/Headers"
+          end
+          venv.pip_install Pathname.pwd
+        end
+        res = resources.map(&:name).to_set - ["Pillow"]
+        res.each do |r|
+          venv.pip_install resource(r)
         venv.pip_install resources
         venv.pip_install_and_link buildpath
+    end
     end
   
     test do
