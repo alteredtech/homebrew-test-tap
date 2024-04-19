@@ -8,7 +8,7 @@ class RandomNumber < Formula
 
   bottle do
     rebuild 1
-    sha256 cellar: :any, monterey: "e53c28ab2090f7d68ba7bc13c4fab9dbe2451e3d2ac9a501aef777c9d309bfcf"
+    sha256 cellar: :any, arm64_sonoma: "e537ac6c29e56526d7bad4d425a12bcf1b931d4a9d384b6d29ab596cbd79f64d"
   end
 
     release = JSON.parse(File.open(File.expand_path('../../tools/release.json', __FILE__)).read)
