@@ -5,12 +5,6 @@ class RandomNumber < Formula
   desc "Test repo for trying homebrew packaging"
   homepage "https://github.com/alteredtech/random-number"
 
-  bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_sonoma: "be63f0b28d6f2292a6c273ae96c0000b5cb40d06e5a62f4bfac85014a1b91876"
-    sha256 cellar: :any, monterey:     "e53c28ab2090f7d68ba7bc13c4fab9dbe2451e3d2ac9a501aef777c9d309bfcf"
-  end
-
   release = JSON.parse(File.open(File.expand_path("../../tools/release.json", __FILE__)).read)
   version release["version"]
   license "MIT"
